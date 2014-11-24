@@ -4,7 +4,7 @@ Donate link: http://www.iqktv.com
 Tags: ckplayer,无广告播放视频,视频播放器
 Requires at least: 3.0
 Tested up to: 4.0
-Stable tag: 1.0
+Stable tag: 0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -40,7 +40,7 @@ Play the video source which from youku iqiyi and so on without advertising.
  
 == Changelog ==
 
-= 1.0 =
+= 0.1 =
 
 * 发布ckplayer without ad 插件
 
