@@ -3,7 +3,7 @@
 Plugin Name: ckplayer without ad
 Plugin URI: http://www.iqktv.com/462.html
 Description: 调用ck播放器实现优酷、爱奇艺、音悦台等视频源无广告播放。使用方法：编辑文章添加[ck1]视频地址[/ck1],如[ck1]http://v.youku.com/v_show/id_XNzIxODU2NTQw.html[/ck1]。如果解析失败请联系插件作者更新。
-Version: 0.1
+Version: 0.2
 Author: BLACKCYY
 Author URI: http://www.iqktv.com/
 */
@@ -13,4 +13,12 @@ function ckplayer($atts, $content=null){
 	return '<embed src="http://1.blackcyy.sinaapp.com/ck3/ckplayer.swf?a='.$content.'" allowFullScreen="true" quality="high" width="480" height="400" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash">';
 }
 add_shortcode('ck1','ckplayer');
+function ckwoa_add_quicktags() {
+?>
+<script type="text/javascript">
+QTags.addButton( 'ck1', 'ck无广告视频', '[ck1]\n[/ck1]','' ); 
+</script>
+<?php
+}
+add_action('admin_print_footer_scripts', 'ckwoa_add_quicktags' );
 ?> 
