@@ -44,6 +44,10 @@ Play the video source which from youku iqiyi and so on without advertising.
 
 * 发布ckplayer without ad 插件
 
+= 0.2 =
+
+* 增加文本模式下的快捷按钮，更加方便使用插件。
+
 == Upgrade notice ==
 
 * 插件首次发布，有任何问题请至插件主页反馈，非常感谢！
