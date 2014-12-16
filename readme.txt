@@ -1,10 +1,10 @@
 ﻿=== ckplayer without ad ===
 Contributors: BLACKCYY
-Donate link: http://www.iqktv.com
+Donate link: http://www.imeoe.com
 Tags: ckplayer,无广告播放视频,视频播放器
 Requires at least: 3.0
 Tested up to: 4.0
-Stable tag: 0.2
+Stable tag: 0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -32,7 +32,7 @@ Play the video source which from youku iqiyi and so on without advertising.
 
 1. 如果解析失败，可能是解析文件失效请联系作者更新。
 
-2. 其他未知错误，请到插件主页留言[http://www.iqktv.com/462.html](http://www.iqktv.com/462.html)
+2. 其他未知错误，请到插件主页留言[http://www.imeoe.com/462.html](http://www.imeoe.com/462.html)
 
 == Screenshots ==
 
@@ -47,6 +47,10 @@ Play the video source which from youku iqiyi and so on without advertising.
 = 0.2 =
 
 * 增加文本模式下的快捷按钮，更加方便使用插件。
+
+= 0.3 =
+
+* （重要更新）增加后台设置播放器大小，使用前请务必设置！
 
 == Upgrade notice ==
 
