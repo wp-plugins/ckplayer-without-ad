@@ -31,7 +31,6 @@ function ckplayer_without_ad_options() {
 
         update_option( $opt_name1, $opt_val1 );
         update_option( $opt_name2, $opt_val2 );
-
 ?>
 <div class="updated"><p><strong><?php _e('settings saved.', 'menu-test' ); ?></strong></p></div>
 <?php
@@ -62,7 +61,6 @@ function ckplayer_without_ad_options() {
 
 </form>
 </div>
-
 <?php
 }
 //短代码
