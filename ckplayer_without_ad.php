@@ -35,12 +35,10 @@ function ckplayer_without_ad_options() {
 ?>
 <div class="updated"><p><strong><?php _e('settings saved.', 'menu-test' ); ?></strong></p></div>
 <?php
-
     }
-
     echo '<div class="wrap">';
     echo "<h2>ckplayer without ad插件播放器设置</h2>";
-    ?>
+?>
 <form action="https://shenghuo.alipay.com/send/payment/fill.htm" onsubmit=" document.charset='gbk'"method="post" target="_blank"> 
 <input name="optEmail" type="hidden" value="1565935060@qq.com" /> 
 <input name="payAmount" type="hidden" value="10" /> 
@@ -66,9 +64,7 @@ function ckplayer_without_ad_options() {
 </div>
 
 <?php
- 
 }
-
 //短代码
 function ckplayer($atts, $content=null){
 	extract(shortcode_atts(array("auto"=>'0'),$atts));	
