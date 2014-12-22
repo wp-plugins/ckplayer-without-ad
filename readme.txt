@@ -4,7 +4,7 @@ Donate link: http://www.imeoe.com
 Tags: ckplayer,无广告播放视频,视频播放器
 Requires at least: 3.0
 Tested up to: 4.0
-Stable tag: 0.31
+Stable tag: 0.32
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -54,6 +54,9 @@ Play the video source which from youku iqiyi and so on without advertising.
 = 0.31 =
 
 * （重要更新）修复插件激活后显示输出一个错误字符的bug！
+= 0.32 =
+
+* 修复bug！
 
 == Upgrade notice ==
 
