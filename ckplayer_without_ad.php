@@ -3,7 +3,7 @@
 Plugin Name: ckplayer without ad
 Plugin URI: http://www.imeoe.com/462.html
 Description: 调用ck播放器实现优酷、爱奇艺、音悦台等视频源无广告播放。使用方法：编辑文章添加[ck1]视频地址[/ck1],如[ck1]http://v.youku.com/v_show/id_XNzIxODU2NTQw.html[/ck1]。如果解析失败请联系插件作者更新。
-Version: 0.32
+Version: 0.50
 Author: BLACKCYY
 Author URI: http://www.imeoe.com/
 */
@@ -18,19 +18,24 @@ function ckplayer_without_ad_options() {
 	}
     $opt_name1 = 'ck_width';
     $opt_name2 = 'ck_height';
+	$opt_name3 = 'ck_style';
     $hidden_field_name = 'mt_submit_hidden';
     $data_field_name1 = 'ck_width';
     $data_field_name2 = 'ck_height';
+	$data_field_name3 = 'ck_style';
 
     $opt_val1 = get_option( $opt_name1 );
     $opt_val2 = get_option( $opt_name2 );
+	$opt_val3 = get_option( $opt_name3 );
  
     if( isset($_POST[ $hidden_field_name ]) && $_POST[ $hidden_field_name ] == 'Y' ) {
         $opt_val1 = $_POST[ $data_field_name1 ];
         $opt_val2 = $_POST[ $data_field_name2 ];
+		$opt_val3 = $_POST[ $data_field_name3 ];
 
         update_option( $opt_name1, $opt_val1 );
         update_option( $opt_name2, $opt_val2 );
+		update_option( $opt_name3, $opt_val3 );
 ?>
 <div class="updated"><p><strong><?php _e('settings saved.', 'menu-test' ); ?></strong></p></div>
 <?php
@@ -55,6 +60,14 @@ function ckplayer_without_ad_options() {
 <input type="text" name="ck_height" value="<?php echo get_option('ck_height');?>" size="20">
 </p><hr />
 
+<p>播放器风格：
+<input type="text" name="ck_style" value="<?php echo get_option('ck_style');?>" size="20">
+</p><hr />
+
+<p>注意：使用该插件前请将该设置填写完毕并保存；
+播放器风格只为用户更改播放器右上角logo，默认值为"3"，如需要自定义播放器logo请联系作者，每月2.1RMB。
+</p><hr />
+
 <p class="submit">
 <input type="submit" name="Submit" class="button-primary" value="<?php esc_attr_e('Save Changes') ?>" />
 </p>
@@ -66,7 +79,7 @@ function ckplayer_without_ad_options() {
 //短代码
 function ckplayer($atts, $content=null){
 	extract(shortcode_atts(array("auto"=>'0'),$atts));	
-	return '<embed src="http://1.blackcyy.sinaapp.com/ck3/ckplayer.swf?a='.$content.'" allowFullScreen="true" quality="high" width="'.get_option('ck_width').'" height="'.get_option('ck_height').'" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash">';
+	return '<embed src="http://1.blackcyy.sinaapp.com/ck'.get_option('ck_style').'/ckplayer.swf?a='.$content.'" allowFullScreen="true" quality="high" width="'.get_option('ck_width').'" height="'.get_option('ck_height').'" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash">';
 }
 add_shortcode('ck1','ckplayer');
 
@@ -74,7 +87,7 @@ add_shortcode('ck1','ckplayer');
 function ckwoa_add_quicktags() {
 ?>
 <script type="text/javascript">
-QTags.addButton( 'ck1', 'ck无广告视频', '[ck1]\n[/ck1]','' ); 
+QTags.addButton( 'ck1', 'ck无广告视频', '[ck1][/ck1]','' ); 
 </script>
 <?php
 }
